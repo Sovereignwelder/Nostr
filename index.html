@@ -94,14 +94,20 @@
 <div class="content-box">
 <h2>Contact Us<h2>
   <form id="customForm" onsubmit="submitForm(event)">
-    <label for="name">Name (required):</label>
-    <input type="text" id="name" name="entry.2005620554" required>
+    <div class="form-group">
+      <label for="name">Name (required):</label>
+      <input type="text" id="name" name="entry.2005620554" required>
+    </div>
 
-    <label for="phone">Phone (required):</label>
-    <input type="tel" id="phone" name="entry.1166974658" required>
+    <div class="form-group">
+      <label for="phone">Phone (required):</label>
+      <input type="tel" id="phone" name="entry.1166974658" required>
+    </div>
 
-    <label for="email">Email (required):</label>
-    <input type="email" id="email" name="entry.1045781291" required>
+    <div class="form-group">
+      <label for="email">Email (required):</label>
+      <input type="email" id="email" name="entry.1045781291" required>
+    </div>
 
     <button type="submit">Submit</button>
   </form>
@@ -123,6 +129,41 @@ function submitForm(e) {
   }).catch(error => console.error('Error:', error));
 }
 </script>
+
+<style>
+.content-box {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+</style>
         <div class="content-box">
             <h3>Guided Bend Test To Qualify Your Welders</h3>
             <img src="https://welding-inspector.us/Bend_Test.jpg" alt="Guided Bend Test for Welder Qualification" title="Guided Bend Test" width="100%">
