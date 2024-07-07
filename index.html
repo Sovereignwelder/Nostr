@@ -91,7 +91,38 @@
                 <li>Training</li>
             </ul>
         </div>
+<div class="content-box">
+<h2>Contact Us<h2>
+  <form id="customForm" onsubmit="submitForm(event)">
+    <label for="name">Name (required):</label>
+    <input type="text" id="name" name="entry.2005620554" required>
 
+    <label for="phone">Phone (required):</label>
+    <input type="tel" id="phone" name="entry.1166974658" required>
+
+    <label for="email">Email (required):</label>
+    <input type="email" id="email" name="entry.1045781291" required>
+
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+<script>
+function submitForm(e) {
+  e.preventDefault();
+  const form = document.getElementById('customForm');
+  const formData = new FormData(form);
+  
+  fetch('https://docs.google.com/forms/d/e/1FAIpQLScKqMPGAtYzO9gpv3pCtaQoE1-kxkZQGYP_8ghxdLesaVYOaQ/formResponse', {
+    method: 'POST',
+    mode: 'no-cors',
+    body: formData
+  }).then(() => {
+    alert('Form submitted successfully!');
+    form.reset();
+  }).catch(error => console.error('Error:', error));
+}
+</script>
         <div class="content-box">
             <h3>Guided Bend Test To Qualify Your Welders</h3>
             <img src="https://welding-inspector.us/Bend_Test.jpg" alt="Guided Bend Test for Welder Qualification" title="Guided Bend Test" width="100%">
