@@ -37,11 +37,8 @@
         .content-box {
             background-color: rgba(255, 255, 255, 0.9);
             padding: 20px;
-            margin-bottom: 40px;
+            margin-bottom: 30px; /* Increased spacing between content boxes */
             border-radius: 5px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
         }
         .floating-buttons {
             position: fixed;
@@ -68,6 +65,47 @@
         .schedule-button {
             background-color: blue;
         }
+        .content-box {
+            max-width: 400px;
+            margin: 0 auto 30px; /* Added bottom margin for spacing */
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .iframe-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            padding-top: 128.75%; /* 824/640 = 1.2875 */
+        }
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
         .button {
             display: inline-block;
             padding: 10px 20px;
@@ -80,20 +118,6 @@
         }
         .button:hover {
             background-color: #0056b3;
-        }
-        .iframe-container {
-            position: relative;
-            overflow: hidden;
-            width: 100%;
-            padding-top: 128.75%;
-        }
-        .iframe-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
         }
     </style>
 </head>
@@ -123,48 +147,4 @@
 
         <div class="content-box">
             <div class="iframe-container">
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScKqMPGAtYzO9gpv3pCtaQoE1-kxkZQGYP_8ghxdLesaVYOaQ/viewform?embedded=true">Loading…</iframe>
-            </div>
-        </div>
-
-        <div class="content-box">
-            <h3>Guided Bend Test To Qualify Your Welders</h3>
-            <img src="https://welding-inspector.us/Bend_Test.jpg" alt="Guided Bend Test for Welder Qualification" title="Guided Bend Test" width="100%">
-        </div>
-
-        <!-- Repeat similar structure for other content boxes -->
-
-        <div class="content-box">
-            <h2>Service Areas in Florida</h2>
-            <section itemscope itemtype="http://schema.org/LocalBusiness">
-                <!-- Service area content -->
-            </section>
-            <img src="https://welding-inspector.us/map.jpg" alt="geo:27.605,-82.852?z=6" title="geo:27.605,-82.852?z=6" width="100%">
-            <a href="geo:27.605,-82.852?z=6" class="button">GEO</a>
-        </div>
-
-        <div class="content-box">
-            <h2>Welding Certifications</h2>
-            <!-- Welding certifications content -->
-        </div>
-
-        <div class="content-box">
-            <h2>What are welding symbols?</h2>
-            <!-- Welding symbols content -->
-            <a href="https://docs.google.com/forms/d/1kZC2UkygTY9wBsSkFnznQwKQt0oyes3p5lKpCwOu9Mc/edit" class="button">Welding Symbol Test</a>
-        </div>
-
-        <!-- Add more content boxes as needed -->
-
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Justin Bryan. All rights reserved.</p>
-    </footer>
-
-    <div class="floating-buttons">
-        <a href="tel:727-244-1667" class="call-button">Call Now</a>
-        <a href="https://calendly.com/justincwi/30min" class="schedule-button">Schedule Call</a>
-    </div>
-</body>
-</html>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQL
