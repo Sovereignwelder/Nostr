@@ -71,12 +71,25 @@
         .schedule-button {
             background-color: blue;
         }
+#sticky-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f1f1f1;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.content {
+  margin-top: 80px; /* Adjust this value based on your header height */
+}
     </style>
 </head>
 <body>
-    <header>
+    <sticky-header>
         <h1>CWI & NDT SERVICES</h1>
-    </header>
+    </sticky-header>
     
     <div class="circle-frame">
         <img src="https://welding-inspector.us/wonder_1681126711237.jpg" alt="Justin Bryan, Professional Welding Inspector" title="Justin Bryan, CWI & NDT Services">
