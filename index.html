@@ -85,6 +85,25 @@
 .content {
   margin-top: 80px; /* Adjust this value based on your header height */
 }
+.expandable-box {
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.box-title {
+  background-color: #f1f1f1;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.box-content {
+  display: none;
+  padding: 10px;
+}
+
+.expandable-box.expanded .box-content {
+  display: block;
+}
     </style>
 </head>
 <body>
@@ -245,11 +264,35 @@ button:hover {
 </style>
         </div>
         <p> <p>
-     <div class="content-box">
+   
+  <script>
+document.addEventListener('DOMContentLoaded', function() {
+  var boxes = document.querySelectorAll('.expandable-box');
+  
+  boxes.forEach(function(box) {
+    var title = box.querySelector('.box-title');
+    
+    title.addEventListener('click', function() {
+      box.classList.toggle('expanded');
+    });
+  });
+});
+</script>
+
+ <div class="expandable-box">
+  <div class="box-title">
+  
+
+  <div class="content-box">
           <H1>BLOG</H1>
           <p>By: Justin Bryan<p>
           <p>A compilation of free resources and helpful information.<p>
         </div>
+</div>
+<div class="box-content">
+    <p>This is the hidden content that will be shown when the box is expanded.</p>
+    <p>You can add any HTML content here.</p>
+  
                <P> <P>
         <div class="content-box">
     <h2>Welding Certifications</h2>
@@ -281,9 +324,9 @@ button:hover {
         <p> <p>
     <div class="content-box">
   <h2>What are welding symbols?</h2>
-  
+
   <p>Welding symbols are the written language of welders. They are how engineers describe exactly how a part is to be welded. They describe the joint preparation, the weld size, the finishing method and, any other requirements according to the project or standard being adhered to. They are capable of describing NDT methods as well as welding process to be used.</p>
-  
+
   <p>It is imperative that welders understand them. It was my experience during the hiring process that there isn't very many ways to test a welder's knowledge of symbols, so I devized this symbol test to solve this problem. Generally, what I would do is give them this test to take while I prepare the machine for their test (I always zero out their machine first but that's a topic for another article).</p>
 
   <a href="https://docs.google.com/forms/d/1kZC2UkygTY9wBsSkFnznQwKQt0oyes3p5lKpCwOu9Mc/edit" class="button">
@@ -302,7 +345,7 @@ button:hover {
     font-weight: bold;
     text-align: center;
   }
-  
+
   .button:hover {
     background-color: #0056b3;
   }
@@ -337,7 +380,7 @@ button:hover {
     font-weight: bold;
     text-align: center;
   }
-  
+
   .button:hover {
     background-color: #0056b3;
   }
@@ -362,7 +405,7 @@ button:hover {
     font-weight: bold;
     text-align: center;
   }
-  
+
   .button:hover {
     background-color: #0056b3;
   }
@@ -385,7 +428,7 @@ button:hover {
     font-weight: bold;
     text-align: center;
   }
-  
+
   .button:hover {
     background-color: #0056b3;
   }
@@ -654,8 +697,9 @@ button:hover {
 
     <p>In conclusion, each type of welding inspection has its place in quality control processes. While first-party inspection offers cost benefits, third-party inspection provides the highest level of impartiality and credibility. The choice depends on project requirements, budget constraints, and desired level of quality assurance.</p>
 </div>
-
-
+    </div>
+ </div>
+</div>
 
     </main>
 
