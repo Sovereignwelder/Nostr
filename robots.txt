@@ -1,0 +1,25 @@
+# Optimized robots.txt for welding-inspector.us (Feb 2026) - Single Page HTML
+# Allows all major search/AI crawlers; minimal blocks for clean crawl
+# Prioritizes your welding inspector landing page visibility
+
+User-agent: *  
+Allow: /  
+
+# Block only essential low-value paths (customize if you add these later)
+Disallow: /admin/  
+Disallow: /login/  
+Disallow: /tmp/  
+Disallow: /cgi-bin/  
+
+# Explicitly allow key AI crawlers
+User-agent: GPTBot          # OpenAI/ChatGPT
+Allow: /  
+User-agent: ClaudeBot       # Anthropic  
+Allow: /  
+User-agent: Google-Extended # Google Gemini
+Allow: /  
+User-agent: OAI-SearchBot   # Perplexity  
+Allow: /  
+
+# Sitemap reference (single file discovery)
+Sitemap: https://welding-inspector.us/sitemap.xml
