@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welding Inspector Blog – Tips, Guides & Industry News</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Read the latest articles about welding procedure qualification, welder certification, VT inspection trends, and more from CWI‑certified Justin Bryan.">
+  <link rel="canonical" href="https://welding-inspector.us/blog/">
+  <meta property="og:title" content="Welding Inspector Blog"/>
+  <meta property="og:description" content="Insights on welding inspection, certifications, testing & training for Pinellas, Pasco & Hillsborough counties."/>
+  <meta property="og:url" content="https://welding-inspector.us/blog/"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="https://welding-inspector.us/media/featured.jpg"/>
+  <style>
+    :root{--primary:#0066ff;--light:#f9f9f9;--dark:#0a0a0a;}
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:system-ui,sans-serif;background:var(--light);color:#333;}
+    .container{max-width:1100px;margin:auto;padding:1rem;}
+    h1{text-align:center;margin:2rem 0;}
+    .posts{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;}
+    .post{background:#fff;padding:1rem;border-radius:.5rem;box-shadow:0 2px 6px rgba(0,0,0,.08);}
+    .post img{width:100%;height:auto;border-radius:.4rem;}
+    .post h2{margin:.8rem 0 .4rem;font-size:1.2rem;color:var(--primary);}
+    .post p{font-size:.95rem;margin-bottom:.6rem;}
+    .post a{color:var(--primary);text-decoration:none;font-weight:600;}
+    .post a:hover{text-decoration:underline;}
+    .contact-float{position:fixed;bottom:1.5rem;right:1.5rem;z-index:1000;}
+    .contact-float a{background:var(--primary);color:#fff;padding:.8rem 1.2rem;border-radius:2rem;text-decoration:none;}
+    @media (max-width:600px){h1{font-size:1.8rem;}}
+  </style>
+</head>
+<body>
+
+<header class="container">
+  <h1>Welding Inspector Blog</h1>
+</header>
+
+<main class="container">
+  <section class="posts" id="post-list">
+    <!-- JavaScript injects post cards here -->
+    <p>Loading posts…</p>
+  </section>
+</main>
+
+<div class="contact-float">
+  <a href="https://cal.com/justinbryan">Contact Us</a>
+</div>
+
+<script>
+  const posts = [
+    {
+      title: "Why Procedure Qualification Matters for Your Project",
+      slug: "procedure-qualification",
+      excerpt: "A deep dive into the importance of proper procedure qualification and how it safeguards quality, cost and schedule.",
+      img: "/media/proc-qual.jpg",
+      alt: "Welder reviewing a welding procedure qualification document",
+      url: "/blog/procedure-qualification.html"
+    },
+    {
+      title: "Welder Certifications: Keeping Your Team Competitive",
+      slug: "welder-certifications",
+      excerpt: "Explore the benefits of a certified welding workforce and how to maintain compliance.",
+      img: "/media/welder-cert.jpg",
+      alt: "Welder wearing safety gear with certification badge",
+      url: "/blog/welder-certifications.html"
+    },
+    {
+      title: "VT Inspection Trends in 2024",
+      slug: "vt-inspection-trends",
+      excerpt: "The newest visual‑testing technologies and best‑practice inspection methods for the modern fabricator.",
+      img: "/media/vt-inspection.jpg",
+      alt: "Technician using a high‑resolution visual testing camera",
+      url: "/blog/vt-inspection-trends.html"
+    }
+  ];
+
+  const list = document.getElementById('post-list');
+  posts.forEach(p => {
+    const card = document.createElement('div');
+    card.className = 'post';
+    card.innerHTML = `
+      <img src="${p.img}" alt="${p.alt}">
+      <h2>${p.title}</h2>
+      <p>${p.excerpt}</p>
+      <a href="${p.url}">Read more</a>
+    `;
+    list.appendChild(card);
+  });
+</script>
+
+</body>
+</html>
